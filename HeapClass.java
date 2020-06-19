@@ -62,18 +62,18 @@ public class Heap {
 					if(heap.get(leftChildIndex) < heap.get(index)){
 						swap(index, leftChildIndex);
 						index = leftChildIndex;
-					}else break;
+					}else return;
 				}else{
 					if(heap.get(rightChildIndex) < heap.get(index)){
 						swap(index, rightChildIndex);
 						index = rightChildIndex;
-					}else break;
+					}else return;
 				}
 			}else if(leftChildIndex < heap.size()){
 				if(heap.get(leftChildIndex) < heap.get(index)) swap(index, leftChildIndex);
-				break;
+				return;
 			}else{
-				break;
+				return;
 			}
 			
 		}
