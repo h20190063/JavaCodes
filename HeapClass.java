@@ -1,6 +1,6 @@
 public class Heap {
 	
-	ArrayList<Integer> heap;
+	private ArrayList<Integer> heap;
 	
 	Heap(){
 		heap = new ArrayList<>();
@@ -84,7 +84,7 @@ public class Heap {
 		// TODO Auto-generated method stub
 		//iterate till root or value is greater than parentIndex
 
-    int index = heap.size()-1;
+    		int index = heap.size()-1;
 		
 		while(index != 0 && heap.get(index) < heap.get(getParentIndex(index))){
 			swap(index, getParentIndex(index));
